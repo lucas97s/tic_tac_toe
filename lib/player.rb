@@ -21,10 +21,4 @@ class Player
   def player_turn_message
     puts "Player #{name}'s turn, please select a position to play!"
   end
-
-  def check_player_turn
-    return "O" if pos == 1 && player_turn.even?
-
-    "X" if pos == 2 && player_turn.odd?
-  end
 end

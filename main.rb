@@ -9,7 +9,7 @@ puts "What is player Number 1's name ?"
 player_num1 = gets.chomp
 puts "What is player Number 2's name ?"
 player_num2 = gets.chomp
-players = [Player.new(player_num1, 0, false), Player.new(player_num2, 0, false)]
+players = [Player.new(player_num1, 0, false, 1), Player.new(player_num2, 0, false, 2)]
 board_positions = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 playing_board = Board.new(board_positions, "O")
@@ -46,7 +46,7 @@ until winner_found
     players[0].score = 1 if players[0].player_turn
     players[0].score = 1 if players[0].player_turn
     players[0].player_won_or_lost
-    players[0].player_won_or_lost
+    players[1].player_won_or_lost
     playing_board.display_board
     break
   end
